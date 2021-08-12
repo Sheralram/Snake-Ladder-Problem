@@ -11,10 +11,14 @@ public class snakeladder {
         //Scanner read = new Scanner(System.in);
         int position = 0;
         System.out.println("The position  number is at 0 "); // position starts from zero
+        int count=0;
         while (position < 100) {
+
+            count++;
             Random random = new Random();
             int dice1 = random.nextInt(6) + 1;
             System.out.println("The player rolls dice " + dice1);
+
             int NOPLAY = 0, LADDER = 1, SNAKE = 2; //Initialising  conditions
             int dice2 = random.nextInt(3); // the player checks condition for noplay,ladder,snake
             System.out.println("check Condition : " + dice2);
@@ -43,8 +47,6 @@ public class snakeladder {
             System.out.println("The position number reached  is " + position);
 
         }
-        if (position > 100) {
-            position = position;
-        }
+        System.out.println("dice count" + count);
     }
 }
